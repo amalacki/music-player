@@ -92,7 +92,7 @@ body {
     margin: 0 20px;
 }
 
-.action-btn.action-btn-big {
+.action-btn .action-btn-big {
     color: #cdc2d0;
     font-size: 30px;
 }
