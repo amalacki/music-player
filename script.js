@@ -9,7 +9,19 @@ const title = document.querySelector('#title');
 const cover = document.querySelector('#cover');
 
 // Song titles
-const songs = ['allyourn', 'featheredindians', 'ladymay'];
+const songs = [
+  {
+    name: 'allyourn',
+    cover: 'can i take my hounds to heaven'
+  },
+  {
+    name: 'featheredindians',
+    cover: 'country squire',
+  }, 
+  {  name: 'ladymay',
+     cover: 'purgatory'
+  }
+];
 
 // Keep track of songs
 let songIndex = 2;
@@ -20,8 +32,8 @@ loadSong(songs[songIndex]);
 // Update song details
 function loadSong(song) {
   title.innerText = song;
-  audio.src = `music/${song}.mp3`;
-  cover.src = `images/${song}.jpg`;
+  audio.src = `music/${song.name}.mp3`;
+  cover.src = `images/${song.cover}.jpg`;
 }
 
 function playSong () {
